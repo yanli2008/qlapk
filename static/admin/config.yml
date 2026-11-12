@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: yanli2008/qlapk
+  branch: main
+  auth_type: implicit
+  base_url: https://你的项目.pages.dev
+  auth_endpoint: /api/auth
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: posts
+    label: 文章
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "摘要", name: "summary", widget: "text", required: false}
+      - {label: "标签", name: "tags", widget: "list", required: false}
+      - {label: "分类", name: "categories", widget: "list", required: false}
+      - {label: "草稿", name: "draft", widget: "boolean", default: false}
+      - {label: "正文", name: "body", widget: "markdown"}
