@@ -1,15 +1,11 @@
 backend:
-  name: github
-  repo: yanli2008/qlapk
-  client_id: Ov23litNeuXWs1LD2NxW
-  client_secret: 【732c244e02d14f807ac437ba326925ecddb4fb81】
-
+  name: git-gateway
+  branch: main
 media_folder: "static/uploads"
 public_folder: "/uploads"
-
 collections:
-  - name: "posts"
-    label: "文章"
+  - name: posts
+    label: 文章
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
