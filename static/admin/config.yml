@@ -14,5 +14,8 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: 标题, name: title, widget: string}
+      - {label: 分类, name: categories, widget: select, multiple: true, options: ["软件", "影视", "教程", "素材"]}
+      - {label: 网盘链接, name: pan_link, widget: string}
+      - {label: 提取码, name: pan_code, widget: string}
       - {label: 发布日期, name: date, widget: datetime}
-      - {label: 正文, name: body, widget: markdown}
+      - {label: 简介正文, name: body, widget: markdown}
