@@ -2,9 +2,12 @@ backend:
   name: github
   repo: yanli2008/qlapk
   branch: main
+  client_id: Ov23li4UFwxqNtOX18aa
   auth_type: implicit
+
 media_folder: "static/uploads"
 public_folder: "/uploads"
+
 collections:
   - name: posts
     label: 资源文章
