@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: yanli2008/qlapk
+  name: git-gateway
   branch: main
-  client_id: Ov23liFIilIMdmElyDVM
-  auth_endpoint: https://github.com/login/oauth/authorize
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
