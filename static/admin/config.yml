@@ -2,6 +2,7 @@ backend:
   name: github
   repo: yanli2008/qlapk
   branch: main
+  auth_type: implicit
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
