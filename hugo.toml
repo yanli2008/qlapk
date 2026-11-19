@@ -14,7 +14,7 @@ buildExpired = false
 [params]
   env = "production"
   title = "奇乐共享"
-  description = "免费软件资源分享站"
+  description = "资源分享站点"
   author = "yanli2008"
   defaultTheme = "auto"
   ShowReadingTime = true
@@ -24,15 +24,13 @@ buildExpired = false
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
   UseHugoToc = true
-  [params.cover]
-    hidden = false
-  [params.fuseOpts]
-    isCaseSensitive = false
-    shouldSort = true
-    location = 0
-    distance = 1000
-    threshold = 0.4
-    keys = ["title", "permalink", "summary", "content"]
+  fuseOpts = {isCaseSensitive = false, shouldSort = true, location = 0, distance = 1000, threshold = 0.4, keys = ["title", "permalink", "summary", "content"]}
+
+[params.assets]
+  disableHLJS = false
+
+[params.search]
+  enable = true
 
 [menu.main]
 [[menu.main]]
@@ -40,7 +38,7 @@ name = "首页"
 url = "/"
 weight = 1
 [[menu.main]]
-name = "资源"
+name = "文章"
 url = "/posts/"
 weight = 2
 [[menu.main]]
