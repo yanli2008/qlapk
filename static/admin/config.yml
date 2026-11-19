@@ -3,7 +3,7 @@ backend:
   repo: yanli2008/qlapk
   branch: main
   auth_type: pkce
-  app_id: "Ov23liFIilIMdmElyDVM"
+  app_id: Ov23liFIilIMdmElyDVM
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
