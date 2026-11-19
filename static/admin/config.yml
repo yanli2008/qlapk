@@ -1,56 +1,28 @@
-baseURL: "https://qlapk.pages.dev/"
-title: "奇乐共享"
-languageCode: "zh-CN"
-theme: "PaperMod"
-enableRobotsTXT: true
-enableEmoji: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
+backend:
+  name: github
+  repo: yanli2008/qlapk
+  branch: main
+  auth_type: pkce
+  app_id: "Ov23liFIilIMdmElyDVM"
 
-minify:
-  minifyOutput: true
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
-params:
-  env: production
-  title: "奇乐共享"
-  description: "免费软件资源分享站"
-  author: "yanli2008"
-  defaultTheme: auto
-  ShowReadingTime: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowWordCount: true
-  ShowRssButtonInSectionTermList: true
-  UseHugoToc: true
-  cover:
-    hidden: false
-  fuseOpts:
-    isCaseSensitive: false
-    shouldSort: true
-    location: 0
-    distance: 1000
-    threshold: 0.4
-    keys: ["title", "permalink", "summary", "content"]
-
-menu:
-  main:
-    - name: 首页
-      url: /
-      weight: 1
-    - name: 资源
-      url: /posts/
-      weight: 2
-    - name: 标签
-      url: /tags/
-      weight: 3
-    - name: 搜索
-      url: /search/
-      weight: 4
-
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON
+collections:
+  - name: "posts"
+    label: "资源帖子"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "简介描述", name: "description", widget: "text"}
+      - {label: "标签", name: "tags", widget: "list"}
+      - {label: "封面图", name: "cover", widget: "object", fields: [
+          {label: "图片链接", name: "image", widget: "image"},
+          {label: "图片说明", name: "alt", widget: "string"}
+        ]}
+      - {label: "下载链接", name: "download_url", widget: "string"}
+      - {label: "提取码", name: "extract_code", widget: "string"}
+      - {label: "正文内容", name: "body", widget: "markdown"}
