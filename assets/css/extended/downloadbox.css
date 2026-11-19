@@ -1,0 +1,24 @@
+.download-box{
+    padding:16px 20px;
+    border-radius:12px;
+    background:var(--code-bg);
+    border:1px solid var(--border);
+    margin:20px 0;
+}
+.download-box .dl-link{
+    display:inline-block;
+    padding:8px 16px;
+    background:#2563eb;
+    color:#fff;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    margin:8px 0;
+}
+.download-box .code{
+    padding:6px 10px;
+    background:#ffedd5;
+    color:#c2410c;
+    border-radius:6px;
+    font-weight:bold;
+}
