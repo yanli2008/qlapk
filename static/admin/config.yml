@@ -1,9 +1,7 @@
 backend:
-  name: github
+  name: turbo-github
   repo: yanli2008/qlapk
   branch: main
-  auth_type: pkce
-  app_id: Ov23liFIilIMdmElyDVM
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
@@ -13,12 +11,8 @@ collections:
     label: 资源文章
     folder: content/posts
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{title}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "标题", name: "title", widget: "string"}
-      - {label: "发布日期", name: "date", widget: "datetime"}
-      - {label: "简介描述", name: "description", widget: "text"}
-      - {label: "标签", name: "tags", widget: "list"}
-      - {label: "下载链接", name: "download_url", widget: "string"}
-      - {label: "提取码", name: "extract_code", widget: "string"}
-      - {label: "正文内容", name: "body", widget: "markdown"}
+      - {label: 标题, name: title, widget: string}
+      - {label: 发布日期, name: date, widget: datetime}
+      - {label: 正文, name: body, widget: markdown}
