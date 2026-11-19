@@ -1,21 +1,56 @@
-backend:
-  name: turbo-github
-  repo: yanli2008/qlapk
-  branch: main
+baseURL: "https://qlapk.pages.dev/"
+title: "奇乐共享"
+languageCode: "zh-CN"
+theme: "PaperMod"
+enableRobotsTXT: true
+enableEmoji: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+minify:
+  minifyOutput: true
 
-collections:
-  - name: posts
-    label: 资源文章
-    folder: content/posts
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - {label: 标题, name: title, widget: string}
-      - {label: 分类, name: categories, widget: select, multiple: true, options: ["软件", "影视", "教程", "素材"]}
-      - {label: 网盘链接, name: pan_link, widget: string}
-      - {label: 提取码, name: pan_code, widget: string}
-      - {label: 发布日期, name: date, widget: datetime}
-      - {label: 简介正文, name: body, widget: markdown}
+params:
+  env: production
+  title: "奇乐共享"
+  description: "免费软件资源分享站"
+  author: "yanli2008"
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  cover:
+    hidden: false
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - name: 首页
+      url: /
+      weight: 1
+    - name: 资源
+      url: /posts/
+      weight: 2
+    - name: 标签
+      url: /tags/
+      weight: 3
+    - name: 搜索
+      url: /search/
+      weight: 4
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
