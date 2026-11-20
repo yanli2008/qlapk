@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Decap CMS</title>
-  <!-- 使用固定稳定版本 -->
-  <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decap CMS</title>
+<script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
 </head>
 <body>
+<!-- 必须要有这个div，CMS挂载在这里 -->
+<div id="nc-root"></div>
 <script>
-  if (window.CMS) {
-    CMS.init();
-  }
+if (window.CMS) {
+  CMS.init();
+}
 </script>
 </body>
 </html>
