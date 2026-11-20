@@ -2,7 +2,7 @@ backend:
   name: github
   repo: yanli2008/qlapk
   auth_type: pkce
-  client_id: Ov23liFIilIMdmElyDVM
+  client_id: Ov23li4UFwxqNtOX18aa
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
