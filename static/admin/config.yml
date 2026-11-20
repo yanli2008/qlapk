@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: yanli2008/qlapk
+  auth_type: pkce
+  client_id: 这里粘贴你的ClientID
+media_folder: "static/uploads"
+public_folder: "/uploads"
+collections:
+  - name: posts
+    label: 资源帖子
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "封面图", name: "cover", widget: "image"}
+      - {label: "资源简介", name: "desc", widget: "text"}
+      - {label: "下载链接", name: "download_url", widget: "string"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
+      - {label: "正文", name: "body", widget: "markdown"}
