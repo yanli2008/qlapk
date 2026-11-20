@@ -1,6 +1,5 @@
 backend:
-  name: decap-turbo
-  repo: yanli2008/qlapk
+  name: git-gateway
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
