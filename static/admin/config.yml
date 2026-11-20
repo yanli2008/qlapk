@@ -1,9 +1,6 @@
 backend:
-  name: github
+  name: decap-turbo
   repo: yanli2008/qlapk
-  client_id: Ov23liFIilIMdmElyDVM
-  auth_type: pkce
-  branch: main
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
