@@ -2,8 +2,8 @@ backend:
   name: github
   repo: yanli2008/qlapk
   client_id: Ov23liFIilIMdmElyDVM
-  # 关键：加上PKCE，解决新版GitHub OAuth空白/跳转失败
   auth_type: pkce
+  branch: main
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
