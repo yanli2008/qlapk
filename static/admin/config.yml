@@ -2,6 +2,8 @@ backend:
   name: github
   repo: yanli2008/qlapk
   client_id: Ov23liFIilIMdmElyDVM
+  # 关键：加上PKCE，解决新版GitHub OAuth空白/跳转失败
+  auth_type: pkce
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
@@ -12,5 +14,5 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "标题", name: "title", widget: "string"}
-      - {label: "日期", name: "date", widget: "datetime"}
+      - {label: "发布日期", name: "date", widget: "datetime"}
       - {label: "正文", name: "body", widget: "markdown"}
