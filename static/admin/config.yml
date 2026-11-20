@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: yanli2008/qlapk
-  auth_type: implicit
-  auth_endpoint: https://github.com/login/oauth/authorize
+  auth_type: pkce
+  client_id: Ov23liFIilIMdmElyDVM
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
