@@ -1,5 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: yanli2008/qlapk
+  auth_type: implicit
 media_folder: "static/uploads"
 public_folder: "/uploads"
 collections:
