@@ -1,38 +1,28 @@
 baseURL = "https://qlapk.pages.dev/"
 title = "奇乐共享"
-languageCode = "zh-CN"
 theme = "PaperMod"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
 enableRobotsTXT = true
-enableEmoji = true
+paginate = 10
 buildDrafts = false
-buildFuture = false
-buildExpired = false
 
-[minify]
-  minifyOutput = true
+[outputs]
+home = ["HTML", "RSS", "JSON"]
 
 [params]
-  env = "production"
-  title = "奇乐共享"
-  description = "资源分享站点"
-  author = "yanli2008"
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  fuseOpts = {isCaseSensitive = false, shouldSort = true, location = 0, distance = 1000, threshold = 0.4, keys = ["title", "permalink", "summary", "content"]}
+author = "yanli2008"
+description = "资源分享站点"
+keywords = ["资源分享","软件下载"]
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
 
-[params.assets]
-  disableHLJS = false
-
-[params.search]
-  enable = true
-
-[menu.main]
+[menu]
 [[menu.main]]
 name = "首页"
 url = "/"
@@ -45,10 +35,3 @@ weight = 2
 name = "标签"
 url = "/tags/"
 weight = 3
-[[menu.main]]
-name = "搜索"
-url = "/search/"
-weight = 4
-
-[outputs]
-home = ["HTML", "RSS", "JSON"]
