@@ -1,11 +1,11 @@
 backend:
-  name: github
-  repo: yanli2008/qlapk
+  name: turbo-github
+  turbo_site_id: "030341bc-cd6f-4b7d-ba66-bd4773d6e34c"
   branch: main
-  auth_type: pkce
-  client_id: Ov23liFIilIMdmElyDVM
+
 media_folder: "static/uploads"
 public_folder: "/uploads"
+
 collections:
   - name: posts
     label: 资源帖子
