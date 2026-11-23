@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "postinstall": "wget https://github.com/nunocoracao/blowfish/archive/refs/heads/main.zip -O blowfish.zip && unzip -q blowfish.zip -d themes && mv themes/blowfish-main themes/blowfish && rm blowfish.zip"
-  }
-}
