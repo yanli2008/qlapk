@@ -1,3 +1,21 @@
-baseURL = "https://qlapk.pages.dev/"
-languageCode = "zh-cn"
-title = "简易站点"
+baseURL = "/"
+languageCode = "zh-CN"
+title = "奇乐共享"
+theme = "blowfish"
+
+# 关闭评论，游客不能回复
+[params.features.comments]
+  enabled = false
+
+# 关闭搜索（不需要可以删掉）
+[params.features.search]
+  enabled = false
+
+# 单页模式，资源分享站
+[params.homepage]
+  layout = "list"
+
+# 广告：后面我们再加谷歌广告代码
+[params]
+  author = "管理员"
+  description = "资源分享站，仅管理员发布更新"
